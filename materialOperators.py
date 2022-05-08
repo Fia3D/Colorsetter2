@@ -17,7 +17,7 @@ class AddCSMaterial(bpy.types.Operator):
 
         context.blend_data.materials.remove(context.object.active_material)
         
-        library_path = bpy.utils.script_path_user() + '\\addons\\Colorsetter\\material_library.blend'
+        library_path = bpy.utils.script_path_user() + '\\addons\\Colorsetter2\\material_library.blend'
         with bpy.data.libraries.load(library_path) as (data_from, data_to):
             data_to.materials = data_from.materials
 
