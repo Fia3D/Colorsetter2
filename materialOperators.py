@@ -62,7 +62,7 @@ class ImportDDS(bpy.types.Operator):
                 glow = self.read_i(colorset, 3)
                 glow.append(1.0)
                 context.object.active_material.cs_rows[i].glow = glow
-                context.object.active_material.cs_rows[i].tile_id = self.read_i(colorset, 1)[0] * 64
+                context.object.active_material.cs_rows[i].tile_id = int(self.read_i(colorset, 1)[0] * 64)
                 context.object.active_material.cs_rows[i].tile_transform = [x for x in self.read_i(colorset, 4)]
                 if colorsetdat:
                     context.object.active_material.cs_rows[i].dye = hex(unpack('>H', colorsetdat.read(2))[0])[2:]
