@@ -1,8 +1,8 @@
 bl_info = {
-    'name': 'Colorsetter BETA',
+    'name': 'Colorsetter2',
     'category': 'All',
-    'version': (0, 1, 2),
-    'blender': (2, 90, 0)
+    'version': (1, 0, 0),
+    'blender': (3, 1, 0)
 }
 
 from . import materialProperties
